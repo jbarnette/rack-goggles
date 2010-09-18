@@ -7,8 +7,9 @@
 See a "pretty" version of your API.
 
 Goggles installs a little tiny Sinatra app on a URL prefix and serves
-any JSON responses that come back as a prettyprinted HTML
-page.
+any JSON responses that come back as a prettyprinted HTML page. There
+are browser add-ons that do a great job with this sort of thing, but I
+wanted something I could live-link from API docs.
 
 This could be a lot fancier and prettier, I just extracted the bare
 minimum from a production app. Patches welcome.

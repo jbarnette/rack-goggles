@@ -1,3 +1,7 @@
+=== 1.1.0 / 2010-09-18
+
+* Pretty-print query params.
+
 === 1.0.0 / 2010-09-17
 
 * Birthday!

@@ -4,7 +4,7 @@ module Rack
   class Goggles < Sinatra::Base
 
     # Duh.
-    VERSION = "1.0.0"
+    VERSION = "1.1.0"
 
     set :static, false
     set :public, ::File.expand_path("../goggles/public", __FILE__)
