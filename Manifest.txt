@@ -1,0 +1,10 @@
+.autotest
+CHANGELOG.rdoc
+Manifest.txt
+README.rdoc
+Rakefile
+lib/rack/goggles.rb
+lib/rack/goggles/public/jquery.js
+lib/rack/goggles/public/prettyprint.js
+lib/rack/goggles/public/style.css
+lib/rack/goggles/views/goggles.erb

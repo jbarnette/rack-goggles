@@ -1,0 +1,57 @@
+= Rack Goggles
+
+* http://github.com/jbarnette/rack-goggles
+
+== Description
+
+See a "pretty" version of your API.
+
+Goggles installs a little tiny Sinatra app on a URL prefix and serves
+any JSON responses that come back as a prettyprinted HTML
+page.
+
+This could be a lot fancier and prettier, I just extracted the bare
+minimum from a production app. Patches welcome.
+
+== Examples
+
+    require "rack/goggles"
+    use Rack::Goggles, "/goggles"
+
+Let's pretend your app has a <tt>users</tt> resource available at
+<tt>http://example.org/api/v3/users</tt>. With Goggles configured as
+above, hitting <tt>http://example.org/goggles/api/v3/users</tt> will
+give you a prettified version.
+
+Goggles ignores any response that doesn't have an
+<tt>application/json</tt> content type.
+
+== Installation
+
+    $ gem install rack-goggles
+
+== License
+
+Copyright 2010 John Barnette (code@jbarnette.com)
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Goggles uses a modified version of James Padolsey's prettyPrint.js
+(http://github.com/jamespadolsey/prettyPrint). Thanks, James!
