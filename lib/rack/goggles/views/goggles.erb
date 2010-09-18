@@ -3,7 +3,7 @@
 <html>
   <head>
     <link href="/__goggles__/style.css" rel="stylesheet" type="text/css">
-    <title>Goggles for <%= @uri %></title>
+    <title>Goggles for <%= @path %></title>
 
     <script type="text/javascript"
             src="/__goggles__/jquery.js"></script>
@@ -13,9 +13,16 @@
   </head>
 
   <body>
-    <div id="header">
-      <h1><%= "#@status: " if @status > 200%> <%= @uri %></h1>
-    </div>
+    <h1>
+      <%= "#@status: " if @status != 200 %> <%= @path %>
+    </h1>
+
+    <dl>
+      <% params.each do |name, value| %>
+        <dt><%= name %></dt>
+        <dd><%= value %></dd>
+      <% end %>
+    </dl>
 
     <div id="json">
     </div>

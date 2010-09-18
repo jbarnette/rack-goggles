@@ -31,7 +31,10 @@ module Rack
       @json   = result.last.first
       @json   = "null" if @json.empty?
       @status = result.first
-      @uri    = env["REQUEST_URI"]
+      @path   = env["PATH_INFO"]
+
+      params.delete "splat"
+      params.delete "token"
 
       erb :goggles
     end

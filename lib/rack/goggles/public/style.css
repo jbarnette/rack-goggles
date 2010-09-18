@@ -3,3 +3,37 @@ body {
     margin: 0 5%;
     padding-bottom: 2em;
 }
+
+h1 {
+    margin-bottom: 0;
+}
+
+dl {
+    float: left;
+    font-size: 80%;
+    margin: .5em 0 2em 0;
+}
+
+dt, dd {
+    background-color: #ddd;
+    float: left;
+    padding: 3px 4px;
+}
+
+dt {
+    font-weight: bolder;
+}
+
+dt:after {
+    content: ":";
+}
+
+dd {
+    margin: 0;
+    margin-right: .5em;
+}
+
+#json {
+    clear: left;
+}
+
